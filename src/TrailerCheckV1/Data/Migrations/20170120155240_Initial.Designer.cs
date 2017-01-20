@@ -8,9 +8,10 @@ using TrailerCheckV1.Data;
 namespace TrailerCheckV1.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170120155240_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")
@@ -181,7 +182,7 @@ namespace TrailerCheckV1.Data.Migrations
 
                     b.Property<string>("ProductGroup");
 
-                    b.Property<string>("SerialNumber");
+                    b.Property<int>("SerialNumber");
 
                     b.Property<string>("Stolen");
 
