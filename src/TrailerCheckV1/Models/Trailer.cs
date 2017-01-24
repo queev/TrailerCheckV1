@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
 namespace TrailerCheckV1.Models
@@ -19,6 +16,7 @@ namespace TrailerCheckV1.Models
         public string Model { get; set; }
 
         [Display(Name = "Year")]
+        [DataType(DataType.Date)]
         public DateTime YearOfManufacture { get; set; }
 
         public string Stolen { get; set; }

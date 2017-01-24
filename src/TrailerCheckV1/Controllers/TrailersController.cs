@@ -20,9 +20,23 @@ namespace TrailerCheckV1.Controllers
         }
 
         // GET: Trailers
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Trailer.ToListAsync());
+            var trailers = from t in _context.Trailer
+                           select t;
+
+            if (!String.IsNullOrWhiteSpace(searchString))
+            {
+                trailers = trailers.Where(s => s.SerialNumber.Contains(searchString));
+            }
+            return View(await trailers.ToListAsync());
+        }
+
+        // POST: Trailers
+        [HttpPost]
+        public string Index(string searchString, bool notUsed)
+        {
+            return "From [HttpPost]Index: search for " + searchString;
         }
 
         // GET: Trailers/Details/5
