@@ -20,5 +20,7 @@ namespace TrailerCheckV1.Models
         public DateTime YearOfManufacture { get; set; }
 
         public string Stolen { get; set; }
+
+        public string Description { get; set; }
     }
 }

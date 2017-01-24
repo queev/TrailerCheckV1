@@ -26,7 +26,8 @@ namespace TrailerCheckV1.Models
                          ProductGroup = "General Duty",
                          SerialNumber = "345846",
                          Stolen = "Yes",
-                         YearOfManufacture = DateTime.Parse("25-03-1985")
+                         YearOfManufacture = DateTime.Parse("25-03-1985"),
+                         Description = "GD125 12' x 5' Resin 2700kg Ramp"
                      },
 
                      new Trailer
@@ -35,7 +36,8 @@ namespace TrailerCheckV1.Models
                          ProductGroup = "Flatbed",
                          SerialNumber = "5133456",
                          Stolen = "No",
-                         YearOfManufacture = DateTime.Parse("01-08-1999")
+                         YearOfManufacture = DateTime.Parse("01-08-1999"),
+                         Description = "LM146 14' x 6'6\" Alloy 3500kg Tri Axle"
                      },
 
                      new Trailer
@@ -44,7 +46,8 @@ namespace TrailerCheckV1.Models
                          ProductGroup = "Horsebox",
                          SerialNumber = "221898",
                          Stolen = "Yes",
-                         YearOfManufacture = DateTime.Parse("16-06-2002")
+                         YearOfManufacture = DateTime.Parse("16-06-2002"),
+                         Description = "HB505R Deluxe Horsebox Blue"
                      },
 
                      new Trailer
@@ -53,7 +56,8 @@ namespace TrailerCheckV1.Models
                          ProductGroup = "Plant",
                          SerialNumber = "360458",
                          Stolen = "No",
-                         YearOfManufacture = DateTime.Parse("24-10-2010")
+                         YearOfManufacture = DateTime.Parse("24-10-2010"),
+                         Description = "GP106H 10' x 5'10\" Resin 3500kg Ramp"
                      }
                 );
                 context.SaveChanges();

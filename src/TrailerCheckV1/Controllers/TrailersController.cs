@@ -67,7 +67,7 @@ namespace TrailerCheckV1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Model,ProductGroup,SerialNumber,Stolen,YearOfManufacture")] Trailer trailer)
+        public async Task<IActionResult> Create([Bind("ID,Model,ProductGroup,SerialNumber,Stolen,YearOfManufacture,Description")] Trailer trailer)
         {
             if (ModelState.IsValid)
             {
