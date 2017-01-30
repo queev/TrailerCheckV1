@@ -8,6 +8,9 @@ namespace TrailerCheckV1.Models
         public int ID { get; set; }
 
         [Display(Name = "Serial Number")]
+        [RegularExpression(@"^[0-9]+$")]
+        [StringLength(7, MinimumLength = 4)]
+        [Required]
         public string SerialNumber { get; set; }
 
         [Display(Name = "Product Group")]

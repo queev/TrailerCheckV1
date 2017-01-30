@@ -27,7 +27,7 @@ namespace TrailerCheckV1.Controllers
 
             if (!String.IsNullOrWhiteSpace(searchString))
             {
-                trailers = trailers.Where(s => s.SerialNumber.Contains(searchString));
+                trailers = trailers.Where(s => s.SerialNumber.Equals(searchString));
             }
             return View(await trailers.ToListAsync());
         }
